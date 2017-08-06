@@ -5,5 +5,6 @@ gapminder <- read.csv("data/gapminder-FiveYears.csv")
 library(ggplot2)
 ggplot(gapminder, aes(x = gdpPercap , y = lifeExp)) + 
         geom_point(aes(color = continent, shape=continent)) + 
-        scale_x_log10()
+        scale_x_log10() + 
+        geom_smooth(method = "lm")
 
